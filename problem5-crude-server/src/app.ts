@@ -6,9 +6,9 @@ import morgan from "morgan";
 import { notFoundHandler } from "./middlewares/not-found-handler";
 import { errorHandler } from "./middlewares/error-handler";
 import { setupSwagger } from "./configs/swagger";
-import healthRoutes from "./routes/health.routes";
 import env from "./configs/env";
 import sourceMapSupport from "source-map-support";
+import router from "./routes";
 sourceMapSupport.install();
 
 const app: Express = express();
@@ -27,15 +27,14 @@ app.use(helmet());
 app.use(cookieParser());
 app.use(morgan(env.NODE_ENV === "development" ? "dev" : "combined"));
 
-//? Swagger Setup
+// Swagger Setup
 setupSwagger(app);
 
-//? Routes
 app.get("/", (req: Request, res: Response) => {
   res.redirect("/api/health");
 });
 
-app.use("/api/health", healthRoutes);
+app.use(router);
 
 // Not found handler (should be after routes)
 app.use(notFoundHandler);
