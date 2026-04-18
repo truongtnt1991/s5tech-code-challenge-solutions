@@ -25,7 +25,7 @@ This service exposes RESTful APIs to manage resources. It demonstrates:
 
 Install dependencies:
 
-npm install
+`npm install`
 
 ## Environment Variables
 
@@ -43,25 +43,25 @@ DATABASE_URL="file:./dev.db"
 
 Generate Prisma client:
 
-npm run prisma:generate
+`npm run prisma:generate`
 
 Run database migration (development):
 
-npm run prisma:migrate
+`npm run prisma:migrate`
 
 ## Run Application
 
 Start development server:
 
-npm run dev
+`npm run dev`
 
 Build project:
 
-npm run build
+`npm run build`
 
 Start production server:
 
-npm run start
+`npm run start`
 
 Server runs at:
 
@@ -75,31 +75,27 @@ http://localhost:3000/api/docs
 
 ## Deployment
 
-Apply database migrations before starting server:
-
-npx prisma migrate deploy
-
 Full deployment flow:
 
 1. Install dependencies
 
-npm install
+`npm install`
 
 2. Generate Prisma client
 
-npm run prisma:generate
+`npm run prisma:generate`
 
 3. Apply migrations
 
-npm run prisma:deploy
+`npm run prisma:deploy`
 
 4. Build application
 
-npm run build
+`npm run build`
 
 5. Start server
 
-npm run start
+`npm run start`
 
 ## API Endpoints
 
