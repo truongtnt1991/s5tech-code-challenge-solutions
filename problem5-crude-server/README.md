@@ -104,14 +104,14 @@ Full deployment flow:
 POST /resources
 
 Request body:
-
+```
 {
   "name": "Sample Resource",
   "description": "Optional description"
 }
-
+```
 Response:
-
+```
 {
   "success": true,
   "message": "Resource created successfully",
@@ -124,7 +124,7 @@ Response:
     "updatedAt": "ISO date"
   }
 }
-
+```
 ---
 
 ### List Resources
@@ -136,7 +136,7 @@ Optional query:
 GET /resources?name=sample
 
 Response:
-
+```
 {
   "success": true,
   "message": "Resources fetched successfully",
@@ -149,7 +149,7 @@ Response:
     "updatedAt": "ISO date"
   }]
 }
-
+```
 ---
 
 ### Get Resource Detail
@@ -157,7 +157,7 @@ Response:
 GET /resources/:id
 
 Response:
-
+```
 {
   "success": true,
   "message": "Resource fetched successfully",
@@ -170,7 +170,7 @@ Response:
     "updatedAt": "ISO date"
   }
 }
-
+```
 ---
 
 ### Update Resource
@@ -178,14 +178,14 @@ Response:
 PUT /resources/:id
 
 Request body:
-
+```
 {
   "name": "Updated name",
   "description": "Updated description"
 }
-
+```
 Response:
-
+```
 {
   "success": true,
   "message": "Resource updated successfully",
@@ -198,7 +198,7 @@ Response:
     "updatedAt": "ISO date"
   }
 }
-
+```
 ---
 
 ### Delete Resource
@@ -206,13 +206,13 @@ Response:
 DELETE /resources/:id
 
 Response:
-
+```
 {
   "success": true,
   "message": "Resource deleted successfully",
   "statusCode": 200
 }
-
+```
 ---
 
 ### Health Check
