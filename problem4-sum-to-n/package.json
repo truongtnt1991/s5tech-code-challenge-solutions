@@ -1,0 +1,14 @@
+{
+  "name": "problem4-sum-to-n",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "vitest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "vitest": "^1.0.0"
+  }
+}
